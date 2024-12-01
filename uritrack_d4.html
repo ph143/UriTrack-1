@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UriTrack - Smart Urine Analysis</title>
+    <style>
+        /* Import Alegreya and other fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Century+Schoolbook&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background: radial-gradient(621px at 25.3% 13.8%, rgb(255, 255, 255) 0%, rgb(234, 236, 255) 90%); /* Full background gradient */
+        }
+        header {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6); /* Blue gradient */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-family: 'Alegreya', serif; /* Apply Alegreya font */
+        }
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section h2 {
+            color: #1e3a8a; /* Blue color */
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-family: 'Century Schoolbook', serif; /* Side heading font */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background: radial-gradient(621px at 25.3% 13.8%, rgb(255, 255, 255) 0%, rgb(234, 236, 255) 90%);
+            padding: 20px;
+            border-radius: 12px;
+            flex: 1 1 calc(33.333% - 20px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+		.team-card {
+			text-decoration: none; /* Removes the underline */
+			color: inherit; /* Keeps the text color the same */
+		}
+
+		.team-card:visited,
+		.team-card:active {
+			color: inherit; /* Prevents color change when clicked or visited */
+		}
+        .card h3 {
+            margin-top: 0;
+            color: #1e3a8a;
+            font-family: 'Century Schoolbook', serif;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>UriTrack</h1>
+    <p>Empowering lives through smart urine analysis</p>
+</header>
+
+<section>
+    <h2>Why It Matters?</h2>
+    <p>Diseases often start at a zero state and progress silently before symptoms arise. Many chronic disorders go unnoticed until significant, irreversible damage has occurred. Late detection limits treatment to managing the disease rather than curing it.</p>
+</section>
+
+<section>
+    <h2>Our Solution</h2>
+    <p>We provide a smart, automated urine analysis system that seamlessly profiles urine and alerts users to potential health red flags. Our system offers:</p>
+    <ul>
+        <li>Regular urine monitoring without requiring any extra effort.</li>
+        <li>Early detection of abnormalities with actionable insights.</li>
+        <li>Personalized lifestyle recommendations and medical prompts when needed.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>How It Works</h2>
+    <div class="container">
+        <div class="card">
+            <h3>Regular Monitoring</h3>
+            <p>Our system ensures consistent monitoring, eliminating the need for manual effort.</p>
+        </div>
+        <div class="card">
+            <h3>Early Detection</h3>
+            <p>Identifies abnormalities at their earliest stages and provides actionable insights.</p>
+        </div>
+        <div class="card">
+            <h3>Personalized Recommendations</h3>
+            <p>Offers tailored lifestyle advice and prompts medical attention when necessary.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Meet the Team</h2>
+    <div class="container">
+        <a href="https://www.linkedin.com/in/ambadipudi-jnana-phani-851415213/" target="_blank" class="card team-card">
+            <h3>A. Jnana Phani</h3>
+            <p>M.Sc – Lead Innovator</p>
+        </a>
+        <a href="https://www.linkedin.com/in/racha-naveen-kumar-74767523b/" target="_blank" class="card team-card">
+            <h3>R. Naveen Kumar</h3>
+            <p>B.Tech – Lead Hardware Engineer</p>
+        </a>
+        
+    </div>
+</section>
+
+<section>
+	<h2>Mentors/Advisors</h2>
+	<div class="container" style="margin-top: 20px;">
+		<div class="card">
+			<h3>Dr. Youhe Gao</h3>
+		</div>
+		<div class="card">
+			<h3>Dr. Suresh</h3>
+			<p>RK Math Delhi</p>
+		</div>
+		<div class="card">
+            <h3>J. Tripura Pavani</h3>
+            <p>B.Sc BioTechnology</p>
+        </div>
+	</div>
+</section>
+	<script>
+    // Select all cards
+    const cards = document.querySelectorAll('.card');
+
+    // Track the current and target gradient positions for each card
+    cards.forEach((card) => {
+        let currentX = 50; // Initial gradient position X (center)
+        let currentY = 50; // Initial gradient position Y (center)
+        let targetX = 50;
+        let targetY = 50;
+
+        // Smooth update function
+        const updateGradient = () => {
+            // Incrementally move current position toward the target
+            currentX += (targetX - currentX) * 0.1; // Adjust 0.1 for smoothness (lower = slower)
+            currentY += (targetY - currentY) * 0.1;
+
+            // Update card background
+            card.style.background = `radial-gradient(circle at ${currentX}% ${currentY}%, #ffffff 0%, #eaeaff 90%)`;
+
+            // Continue updating if the target hasn't been reached
+            if (Math.abs(targetX - currentX) > 0.1 || Math.abs(targetY - currentY) > 0.1) {
+                requestAnimationFrame(updateGradient);
+            }
+        };
+
+        // Mousemove handler
+        card.addEventListener('mousemove', (e) => {
+            const { offsetX, offsetY } = e; // Get mouse position inside the card
+            const { offsetWidth, offsetHeight } = card; // Get card dimensions
+
+            // Calculate target percentages
+            targetX = (offsetX / offsetWidth) * 100;
+            targetY = (offsetY / offsetHeight) * 100;
+
+            // Start smooth gradient update
+            requestAnimationFrame(updateGradient);
+        });
+
+        // Mouseleave handler
+        card.addEventListener('mouseleave', () => {
+            // Do nothing; the gradient remains where it was last updated
+        });
+    });
+</script>
+
+
+</body>
+</html>
