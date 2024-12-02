@@ -92,6 +92,36 @@
                 font-size: 0.9em;
             }
         }
+
+	/* Responsive gradient for mobile screens */
+@media (max-width: 768px) {
+    body {
+        background: radial-gradient(500px at 50% 20%, rgb(255, 255, 255) 0%, rgb(234, 236, 255) 90%);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background: radial-gradient(400px at 50% 25%, rgb(255, 255, 255) 0%, rgb(234, 236, 255) 85%);
+    }
+}
+
+/* Gradient for cards */
+.card {
+    background: radial-gradient(621px at 25.3% 13.8%, rgb(255, 255, 255) 0%, rgb(234, 236, 255) 90%);
+}
+
+@media (max-width: 768px) {
+    .card {
+        background: radial-gradient(500px at 50% 20%, rgb(255, 255, 255) 0%, rgb(234, 236, 255) 90%);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        background: radial-gradient(400px at 50% 25%, rgb(255, 255, 255) 0%, rgb(234, 236, 255) 85%);
+    }
+}
     </style>
 </head>
 <body>
